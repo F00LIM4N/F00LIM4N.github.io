@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>TP</title>
+</head>
+<body>
+    <!----------------------------------------------------------------------------- HEADER ----------------------------------------------------------------------------->
+    <header>
+        <div>
+            <h1>HTML/CSS INTERPRET</h1>
+        </div>
+    </header>
+    <!----------------------------------------------------------------------------- HEADER ----------------------------------------------------------------------------->
+
+    <!----------------------------------------------------------------------------- SECTION ----------------------------------------------------------------------------->
+    <section>
+        <div class="length_we_have"></div>
+        <div class="code">
+            <label>
+                <p class="character_count">HTML</p>
+                <div id="html_ecrit" class="col-3">
+                    <div class="snippet" data-title=".dot-flashing">
+                        <div class="stage">
+                            <div class="dot-flashing">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <select id="input_select_length" onchange="select_length()">
+                        <option selected value="length_200">200</option>
+                        <option value="length_400">400</option>
+                        <option value="length_600">600</option>
+                        <option value="length_800">800</option>
+                    </select>
+                    <select id="input_select_balise" onchange="select_balise()">
+                        <option id="no_option_html" value="">Veuillez choisir une balise</option>
+                        <option value="balise_title">Balise H1</option>
+                        <option value="balise_p">Balise p</option>
+                        <option value="balise_header">Balise header</option>
+                        <option value="balise_nav">Balise nav</option>
+                        <option value="balise_section">Balise section</option>
+                        <option value="balise_footer">Balise footer</option>
+                    </select>
+                </div>
+            </label>
+            <textarea oninput="refresh()" onkeyup="caracters_nombre()" placeholder="Écrivez du code HTML..." id="code_HTML" cols="30" rows="10" maxlength="200"></textarea>
+            <label>
+                <p>CSS</p>
+                <div id="css_ecrit" class="col-3">
+                    <div class="snippet" data-title=".dot-flashing">
+                        <div class="stage">
+                            <div class="dot-flashing">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <select id="input_select" onchange="select_color()">
+                    <option id="no_option" value="">Veuillez choisir une couleur</option>
+                    <option value="white_add">Blanc</option>
+                    <option value="black_add">Noir</option>
+                    <option value="grey_add">Gris</option>
+                </select>
+            </label>
+            <textarea oninput="refresh()" placeholder="Écrivez du code CSS..." id="code_CSS" cols="30" rows="10"></textarea>
+            <label>
+                <p>JS</p>
+                <div id="js_ecrit" class="col-3">
+                    <div class="snippet" data-title=".dot-flashing">
+                        <div class="stage">
+                            <div class="dot-flashing">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </label>
+            <textarea oninput="refresh()" placeholder="Écrivez du code JS..." id="code_JS" cols="30" rows="10"></textarea>
+        </div>
+        <iframe id="res"></iframe>
+    </section>
+    <!----------------------------------------------------------------------------- SECTION ----------------------------------------------------------------------------->
+
+    <!----------------------------------------------------------------------------- FOOTER ----------------------------------------------------------------------------->
+    <footer>
+        <div class="progress_bar">
+            <p id="tiers"></p>
+        </div>
+    </footer>
+    <!----------------------------------------------------------------------------- FOOTER ----------------------------------------------------------------------------->
+</body>
+</html>
